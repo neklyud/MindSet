@@ -1,0 +1,7 @@
+<form method="POST" action="/" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.download(size=20) }}
+    {{ form.get_predict(size=20) }}
+    <!--<input type="submit" name="download" value="Загрузить csv файл на сервер">
+    <input type="submit" name="get_predict" value="Получить predict">-->
+</form>

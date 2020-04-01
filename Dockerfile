@@ -4,4 +4,4 @@ COPY . /root
 
 WORKDIR /root
 
-RUN pip install flask gunicorn numpy sklearn scipy pandas joblib jupyter
+RUN pip install flask gunicorn numpy sklearn scipy pandas joblib jupyter flask_wtf matplotlib
