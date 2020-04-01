@@ -37,13 +37,11 @@ def index():
         poly = load_model(path2poly)
         ohe = load_model(path2ohe)
         model = load_model(path2model)
-        print('1488')
-        X_test, y_test, idx = preprocess(path2test, ohe, scaler)
+        X_test, y_test, idx = preprocess(path2test, ohe, scaler, poly)
         prediction = predict(X_test, model)
     except:
         return redirect(url_for('bad_request'))
     #return jsonify(json.loads(pd.Series(prediction, index=idx).to_json()))
-    print(np.unique(prediction))
     return pd.Series(prediction, index=idx).to_json()
 @app.route('/badrequest400')
 def bad_request():
